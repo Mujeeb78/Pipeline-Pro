@@ -2,5 +2,5 @@
 
 
 trigger the build
-trig
+triggering the build 
 

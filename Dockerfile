@@ -1,5 +1,5 @@
 FROM ubuntu 
-RUN apt update 
+RUN apt-get update
 RUN apt install –y apache2 
 RUN apt install –y apache2-utils 
 EXPOSE 80

@@ -14,6 +14,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t apacheimage .'
+                sh 'docker images'
             }
         }
     }

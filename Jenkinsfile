@@ -11,7 +11,7 @@ pipeline {
                 sh "git --version"
             }
         }
-        stage('Build Docker Image') {
+        stage('Build Docker Image with build no') {
             steps {
                 sh 'docker build -t apacheimage:${BUILD_NUMBER} . '
                 sh 'docker images'

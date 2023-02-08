@@ -11,5 +11,10 @@ pipeline {
                 sh "git --version"
             }
         }
+        stage("Building Docker Image") {
+            steps {
+                sh "docker build ApacheImage"
+            }
+        }
     }
 }

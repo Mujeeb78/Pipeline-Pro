@@ -17,5 +17,11 @@ pipeline {
                 sh 'docker images'
             }
         }
+        stage('Docker Image with own name') {
+            steps {
+                sh 'docker build -t mujeeb98/apacheimage: .
+                sh 'docker images'
+            }
+        }
     }
 }

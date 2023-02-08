@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage("Check Docker Version") {
+        stage("Checking Docker Version") {
             steps {
                 sh "docker --version"
             }
         }
-        stage("Check GIT Version") {
+        stage("Checking GIT Version") {
             steps {
                 sh "git --version"
             }

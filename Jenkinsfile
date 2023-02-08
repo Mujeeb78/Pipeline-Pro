@@ -11,9 +11,9 @@ pipeline {
                 sh "git --version"
             }
         }
-        stage("Building Docker Image") {
+        stage('Build Docker Image') {
             steps {
-                sh "docker build ApacheImage"
+                sh 'docker build -t ApacheImage .'
             }
         }
     }

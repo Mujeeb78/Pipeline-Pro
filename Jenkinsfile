@@ -13,15 +13,10 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t apacheimage .'
+                sh 'docker build -t apacheimage:${BUILD_NUMBER} . '
                 sh 'docker images'
             }
         }
-        stage('Docker Image with own name') {
-            steps {
-                sh 'docker build -t mujeeb98/apacheimage: .'
-                sh 'docker images'
-            }
-        }
+        
     }
 }

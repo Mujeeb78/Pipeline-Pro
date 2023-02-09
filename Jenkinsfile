@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage("Checking Docker Version") {
             steps {
-                sh "docker --version"
+                retry(2){
+                sh "dockr --version"
+                }
             }
         }
         stage("Checking GIT Version") {
